@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      # build with a local name first
+      # build locally with a simple name
       - docker build -t javatechie-registry .
       # tag with ECR URI
       - docker tag javatechie-registry:latest $REPOSITORY_URI:latest
@@ -34,5 +34,6 @@ artifacts:
   files:
     - imagedefinitions.json
     - target/course-service.jar
+
 
 
