@@ -1,3 +1,4 @@
+
 version: 0.2
 
 phases:
@@ -14,7 +15,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      # build locally with a simple name
+      # build using the Dockerfile with Corretto base
       - docker build -t javatechie-registry .
       # tag with ECR URI
       - docker tag javatechie-registry:latest $REPOSITORY_URI:latest
