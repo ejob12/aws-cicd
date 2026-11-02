@@ -1,7 +1,9 @@
-
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto17
   pre_build:
     commands:
       - mvn clean install
@@ -35,6 +37,5 @@ artifacts:
   files:
     - imagedefinitions.json
     - target/course-service.jar
-
 
 
